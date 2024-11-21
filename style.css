@@ -7,16 +7,16 @@ body {
     background-color: #9fd3a7;
 }
 
-.btn {
-    background-color: #0f1bc2;
-}
-
 .btn,
 .btn-reset {
     margin: 20px;
     font-size: 24px;
     border-radius: 30px;
     color: aliceblue;
+}
+
+.btn {
+    background-color: #0f1bc2;
 }
 
 .btn-reset {
@@ -37,4 +37,5 @@ body {
     align-items: center;
     border: black solid 1px;
     box-sizing: border-box;
+    transition: background-color 0.3s;
 }

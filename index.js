@@ -3,7 +3,8 @@ const btn = document.querySelector(".btn");
 const reset = document.querySelector(".btn-reset");
 
 reset.addEventListener("click", () => {
-  clearGrid();
+  // Clear the actual grid
+  container.innerHTML = "";
   createGrid(16, 960 / 16);
 });
 
@@ -20,13 +21,9 @@ btn.addEventListener("click", () => {
   createGrid(numSquares, squareSize);
 });
 
-function clearGrid() {
+function createGrid(squares, squareSize) {
   // Clear the actual grid
   container.innerHTML = "";
-}
-
-function createGrid(squares, squareSize) {
-  clearGrid();
 
   for (let i = 1; i <= squares * squares; i++) {
     const divChild = document.createElement("div");
@@ -47,5 +44,6 @@ function createGrid(squares, squareSize) {
 }
 
 // Create initial grid by default (16 x 16);
-clearGrid();
+// Clear the actual grid
+container.innerHTML = "";
 createGrid(16, 960 / 16);
